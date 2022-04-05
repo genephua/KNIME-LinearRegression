@@ -46,9 +46,8 @@ Based on the comparison of the R^2 values, it appears that the Ridge and Lasso r
 ## Most Important Features in Determining The Response Variable
 The p values of the predictor variables are the most important aspect to look at in determining the response variable. Predictor variables which have P values lesser than 0.05 or are close to 0 are significant predictors of the response variables. Predictor variables which have P values of greater than 0.05 are taken to be insignificant as there is no evidence that the variable has an effect on the response.
 
-![image](https://user-images.githubusercontent.com/102946848/161668577-8eddf3f2-ec8a-42c3-a34b-9c2a174ec552.png)
+![image](https://user-images.githubusercontent.com/102946848/161669207-a8a07b7b-5c2d-4a7e-9f39-fdbccd721fa9.png)
 
- 
 Predictor Values: NO2(GT), PT08.S4(NO2), T, RH, NO2(GT) Squared, PT08.S4(NO2) Squared, T Squared, RH Squared
 
 Therefore, all the predictor variables used which are also the features, are all equally important in determining the response variable as they all have P values close to 0.
