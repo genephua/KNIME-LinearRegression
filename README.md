@@ -4,17 +4,23 @@
 ### Project Details
 The Project aims to train a predictive model to obtain a model for AH Absolute Humidity.
 
-Q1 Response and Predictor Variables’ Details and Derivations
+### Response and Predictor Variables’ Details and Derivations
 (Before Training of Model)
-Response Variable: AH Absolute Humidity
-Predictor Variables: NO2(GT), PT08.S4(NO2), T, RH 
-Dropped Variables: NMHC(GT), CO(GT), PT08.S1(CO), C6H6(GT), PT08.S2(NMHC), NOx(GT), PT08.S3(NOx), PT08.S5(O3)
-The data set contained missing values that were tagged with -200 value.  The columns expressions node had to be used to change the -200 value to real missing values of “?” which were then treated using the missing value node.
-NMHC(GT) was a variable in the data set that had to be dropped because it had too many missing values. For the rest of the missing values for the other variables(columns), I chose to use linear interpolation since there were many values in the columns which could be used to derive the missing values.
-An assumption of Linear Regression analysis is that there should be no multicollinearity between variables. As The variables CO(GT), PT08.S1(CO), C6H6(GT), PT08.S2(NMHC), NOx(GT), PT08.S3(NOx), PT08.S5(O3) were found to display high multicollinearity, they were also dropped.
+
+**Response Variable:** AH Absolute Humidity
+
+**Predictor Variables:** NO2(GT), PT08.S4(NO2), T, RH 
+
+**Dropped Variables:** NMHC(GT), CO(GT), PT08.S1(CO), C6H6(GT), PT08.S2(NMHC), NOx(GT), PT08.S3(NOx), PT08.S5(O3)
+
+The data set contained missing values that were tagged with -200 value.  The columns expressions node had to be used to change the -200 value to real missing values of “?” which were then treated using the missing value node. NMHC(GT) was a variable in the data set that had to be dropped because it had too many missing values. For the rest of the missing values for the other variables(columns), I chose to use linear interpolation since there were many values in the columns which could be used to derive the missing values. An assumption of Linear Regression analysis is that there should be no multicollinearity between variables. As The variables CO(GT), PT08.S1(CO), C6H6(GT), PT08.S2(NMHC), NOx(GT), PT08.S3(NOx), PT08.S5(O3) were found to display high multicollinearity, they were also dropped.
+
 (After Training of Model)
-Predictor Variables (Interaction Terms Created): NO2(GT) Squared, PT08.S4(NO2) Squared, T Squared, RH Squared
+
+**Predictor Variables (Interaction Terms Created):** NO2(GT) Squared, PT08.S4(NO2) Squared, T Squared, RH Squared
+
 After running a Knime Linear Regression model and plotting a residual scatter plot, it showed a curved residual pattern. This suggested there might be a need to fit a polynomial of some order to explain this curved pattern of residuals. As such, interaction terms of the squared value of the different variables were created, and this had the effect of increasing the R^2 value which simply meaned that there was an increase in the strength of the linear relationship between the variables. The math column (multi column) node was used to square the existing columns of data. 
+
 Q2 Predictive Models Used and Performance Evaluation Statistics
 Knime Multiple Regression Model
 R^2 = 0.94
