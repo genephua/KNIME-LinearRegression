@@ -53,7 +53,8 @@ Predictor Values: NO2(GT), PT08.S4(NO2), T, RH, NO2(GT) Squared, PT08.S4(NO2) Sq
 Therefore, all the predictor variables used which are also the features, are all equally important in determining the response variable as they all have P values close to 0.
 
 *Analysis powered by KNIME Analytics Platform*
-<br /> *Data Source: AirQualityUCI.xlsx*
+<br /> *KNIME Workflow: [https://github.com/genephua/KNIME-LinearRegression/blob/main/Linear%20Regression%20Model%20-%20Air%20Quality.knwf](https://github.com/genephua/KNIME-LinearRegression/blob/main/Linear%20Regression%20Model%20-%20Air%20Quality.knwf)*
+<br /> *Data Source: [AirQualityUCI.xlsx](https://github.com/genephua/KNIME-LinearRegression/blob/main/AirQualityUCI.xlsx)*
 
 
 
